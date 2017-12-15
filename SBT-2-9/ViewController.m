@@ -30,43 +30,51 @@
     [self.view addSubview:self.counterLabel];
 
     self.decrementButton = [[UIButton alloc] initWithFrame:CGRectMake(25, 100, 100, 25)];
-    [self.decrementButton setTitle:@"increment" forState:UIControlStateNormal];
-    [self.decrementButton.backgroundColor = [UIColor.lightGrayColor];
-    [self.view addSubview:self.incrementButton];
+    [self.decrementButton setTitle:@"decrement" forState:UIControlStateNormal];
+  
+    self.decrementButton.backgroundColor = UIColor.lightGrayColor;
+    [self.view addSubview:self.decrementButton];
     [self.decrementButton addTarget:self action:@selector(decrementTapped) forControlEvents:UIControlEventTouchUpInside];
 
-    self.incrementButton = [[UIButton alloc] initWithFrame:CGRectMake(25, 100, 100, 25)];
+    self.incrementButton = [[UIButton alloc] initWithFrame:CGRectMake(150, 100, 100, 25)];
     [self.incrementButton setTitle:@"increment" forState:UIControlStateNormal];
-    [self.incrementButton.backgroundColor = UIColor.lightGrayColor];
+    self.incrementButton.backgroundColor = UIColor.lightGrayColor;
     [self.view addSubview:self.incrementButton];
-    [self.decrementButton addTarget:self action:@selector(incrementTapped) forControlEvents:UIControlEventTouchUpInside];
+    [self.incrementButton addTarget:self action:@selector(incrementTapped) forControlEvents:UIControlEventTouchUpInside];
 
-self.model = [CounterModel new];
+    self.model = [CounterModel new];
     [self updateView];
 }
 
 
 - (void) decrementTapped
 {
-    
+    self.model.counter = @(self.model.counter.integerValue - 1);
+    [self updateView];
 }
 
 - (void) incrementTapped
 {
-    
+    self.model.counter = @(self.model.counter.integerValue + 1);
+    [self updateView];
 }
 
 - (void) updateView
 {
     self.counterLabel.text = self.model.counter.stringValue;
-    if (self.counter.integerValue == 0){
-        
+    if (self.model.counter.integerValue == 0)
+    {
         self.decrementButton.enabled = NO;
-        
     }
-    else{
+    else
+    {
         self.decrementButton.enabled = YES;
     }
+    
+    NSNumberFormatter *formatter = [NSNumberFormatter new];
+    formatter.numberStyle = NSNumberFormatterSpellOutStyle;
+    self.counterLabel.text = [formatter stringFromNumber:self.model.counter];
+    
 }
 
 - (void)didReceiveMemoryWarning {
