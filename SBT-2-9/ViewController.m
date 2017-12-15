@@ -27,3 +27,11 @@
 
 
 @end
+
+
+/*
+ MVC
+ MVP
+ MMVM
+ Viper
+ */
