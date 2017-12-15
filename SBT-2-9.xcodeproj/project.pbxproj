@@ -15,6 +15,7 @@
 		64AA6DA71FE41B2900B30C37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AA6DA61FE41B2900B30C37 /* main.m */; };
 		64AA6DB11FE41B2900B30C37 /* SBT_2_9Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AA6DB01FE41B2900B30C37 /* SBT_2_9Tests.m */; };
 		64AA6DBC1FE41B2900B30C37 /* SBT_2_9UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AA6DBB1FE41B2900B30C37 /* SBT_2_9UITests.m */; };
+		64AA6DCB1FE4254300B30C37 /* CounterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AA6DCA1FE4254300B30C37 /* CounterModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		64AA6DB71FE41B2900B30C37 /* SBT-2-9UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SBT-2-9UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64AA6DBB1FE41B2900B30C37 /* SBT_2_9UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBT_2_9UITests.m; sourceTree = "<group>"; };
 		64AA6DBD1FE41B2900B30C37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64AA6DC91FE4254300B30C37 /* CounterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CounterModel.h; sourceTree = "<group>"; };
+		64AA6DCA1FE4254300B30C37 /* CounterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CounterModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				64AA6D951FE41B2900B30C37 /* AppDelegate.m */,
 				64AA6D971FE41B2900B30C37 /* ViewController.h */,
 				64AA6D981FE41B2900B30C37 /* ViewController.m */,
+				64AA6DC91FE4254300B30C37 /* CounterModel.h */,
+				64AA6DCA1FE4254300B30C37 /* CounterModel.m */,
 				64AA6D9A1FE41B2900B30C37 /* Main.storyboard */,
 				64AA6DA01FE41B2900B30C37 /* Assets.xcassets */,
 				64AA6DA51FE41B2900B30C37 /* Info.plist */,
@@ -268,6 +273,7 @@
 				64AA6D961FE41B2900B30C37 /* AppDelegate.m in Sources */,
 				64AA6DA71FE41B2900B30C37 /* main.m in Sources */,
 				64AA6D9F1FE41B2900B30C37 /* SBT_2_9.xcdatamodeld in Sources */,
+				64AA6DCB1FE4254300B30C37 /* CounterModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
